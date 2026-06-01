@@ -448,20 +448,6 @@ function resetAll() {
 
 updateProgress();
 
-// ===== SAVE & LOAD =====
-function saveState(){
-  localStorage.setItem("app-state", document.body.innerHTML);
-}
-
-window.addEventListener("click", ()=>saveState());
-
-window.addEventListener("load", ()=>{
-  const saved = localStorage.getItem("app-state");
-  if(saved){
-    document.body.innerHTML = saved;
-  }
-});
-
 // ===== SHARE =====
 function shareApp(){
   if(navigator.share){
